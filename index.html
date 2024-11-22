@@ -10,6 +10,45 @@
           .game a { text-decoration: none; color: #333; }
           .game-title { font-size: 18px; font-weight: bold; margin: 10px 0; }
       </style>
+           <style>
+        /* Estilo para o botão "Clique aqui para baixar o emulador" */
+        .download-button-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .download-button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .download-button:hover {
+            background-color: #45a049;
+        }
+
+        .game {
+            margin-bottom: 20px;
+        }
+
+        .game-title {
+            font-size: 18px;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .game img {
+            width: 100%;
+            max-width: 200px;
+            margin: 0 auto;
+            display: block;
+        }
+    </style>
 <script>
           function searchGames() {
               let input = document.getElementById('search').value.toLowerCase();
@@ -24,6 +63,9 @@
 <body>
 <div class="search-bar">
 <input id="search" onkeyup="searchGames()" placeholder="Pesquisar jogos..." type="text"/>
+</div>
+<div class="download-button-container">
+<a href="https://www.emuladorlink.com" class="download-button" target="_blank">CLIQUE AQUI PARA BAIXAR O EMULADOR</a>
 </div>
 <div class="games">
 <div class="game">

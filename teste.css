@@ -1,0 +1,117 @@
+/* Resetando algumas propriedades padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Barra de pesquisa */
+.search-bar {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.search-bar input {
+    padding: 10px;
+    width: 80%;
+    max-width: 400px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.search-bar input:focus {
+    border-color: #ff0000;
+}
+
+/* Contêiner para os jogos */
+.games {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+/* Cada jogo individual */
+.game {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.game img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+/* Título do jogo */
+.game-title {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #ff0000;
+    color: white;
+    text-transform: uppercase;
+}
+
+/* Links */
+.game a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Media Queries para telas menores */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .search-bar input {
+        width: 100%;
+        max-width: none;
+    }
+
+    .games {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .game img {
+        height: 120px;
+    }
+
+    .game-title {
+        font-size: 16px;
+        padding: 8px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .game img {
+        height: 100px;
+    }
+
+    .game-title {
+        font-size: 14px;
+        padding: 6px;
+    }
+}
